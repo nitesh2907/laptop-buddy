@@ -50,6 +50,8 @@
   .card .ico{font-size:2rem}
   .card h3{margin:6px 0 6px;font-size:1.15rem}
   .card p{margin:0;color:var(--muted)}
+  .swatches{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+  .swatches span{width:22px;height:22px;border-radius:50%;border:2px solid #d7ecf7}
   .pets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .pet{border-radius:22px;padding:26px 20px;text-align:center;border:2px solid var(--line);background:#fff}
   .pet .face{font-size:3.4rem}
@@ -130,6 +132,25 @@
   </div>
 </section>
 
+<section id="studio" style="padding-top:20px">
+  <div class="wrap">
+    <h2>Buddy Studio</h2>
+    <p class="sub">Tap your pet to open its own app: change its look, play with it, see your stats and set your reminders.</p>
+    <div class="grid">
+      <div class="card"><div class="ico">🎨</div><h3>15 skins + any colour</h3>
+        <p>Fox: Arctic, Midnight, Sakura, Golden. Panda: Cocoa, Bubblegum, Mint, Galaxy. Penguin: Emperor, Royal and more – or pick your own colour.</p>
+        <div class="swatches" aria-hidden="true">
+          <span style="background:#f7983a"></span><span style="background:#f4f6fb"></span><span style="background:#5a58a8"></span>
+          <span style="background:#ff9ec4"></span><span style="background:#f6c544"></span><span style="background:#f06292"></span>
+          <span style="background:#3fa99d"></span><span style="background:#3b2f7a"></span><span style="background:#22262e"></span>
+          <span style="background:#5b3fa0"></span>
+        </div></div>
+      <div class="card"><div class="ico">👋</div><h3>Set up in 3 steps</h3><p>The first time it opens, choose your pet, give it a name and pick a look. It remembers everything.</p></div>
+      <div class="card"><div class="ico">⚙️</div><h3>Your rules</h3><p>Choose how often to drink water and when to take breaks, and switch sound, voice, walking and start-with-Windows on or off.</p></div>
+    </div>
+  </div>
+</section>
+
 <section id="install">
   <div class="wrap">
     <h2>Install in 30 seconds</h2>
@@ -148,7 +169,7 @@
     <h2>Questions</h2>
     <details><summary>Is it free?</summary><p>Yes, completely free.</p></details>
     <details><summary>Does it send my data anywhere?</summary><p>No. Everything runs on your computer and works offline. Your stats and pet names are saved only on your laptop. The mic only listens after you press the Mic button, using Windows' built-in speech recognition.</p></details>
-    <details><summary>How do I use it?</summary><p>Click your pet for today's stats and buttons (water, sit, feed, play, chat, rename, switch pets). Drag it anywhere. Right-click for the full menu.</p></details>
+    <details><summary>How do I use it?</summary><p>Click your pet to open Buddy Studio – feed it, play, chat, change its pet, name, skin and colour, check your stats and set your reminders. Drag it anywhere. Right-click for the quick menu.</p></details>
     <details><summary>How do I close or uninstall it?</summary><p>Right-click the pet → <b>Quit buddy</b>. To uninstall, open <b>Settings → Apps → Installed apps</b>, find <b>Laptop Buddy</b> and click <b>Uninstall</b>.</p></details>
     <details><summary>Does it work on Mac?</summary><p>Not yet – Windows 10 and 11 only.</p></details>
   </div>
@@ -160,7 +181,7 @@
     <p style="margin:0 0 26px;color:#d6eefb">Stay hydrated, take breaks, and smile a little more.</p>
     <a class="btn" href="https://github.com/nitesh2907/laptop-buddy/releases/latest/download/LaptopBuddySetup.exe">⬇ Download for Windows</a>
   </div>
-  <footer>Laptop Buddy v1.0.0 · Made with 💙 for people who forget to drink water</footer>
+  <footer>Laptop Buddy v1.1.0 · Made with 💙 for people who forget to drink water</footer>
 </div>
 </body>
 </html>
