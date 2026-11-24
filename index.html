@@ -78,9 +78,11 @@
           transform:perspective(1400px) rotateY(-9deg) rotateX(4deg);transition:transform .6s ease}
   .stage:hover .window{transform:perspective(1400px) rotateY(-3deg) rotateX(2deg)}
   .pets-on-top{position:absolute;top:0;left:8%;right:8%;display:flex;justify-content:space-between;align-items:flex-end;z-index:2;pointer-events:none}
-  .pets-on-top img{height:120px;width:auto;animation:bob 2.6s ease-in-out infinite;filter:drop-shadow(0 10px 14px rgba(0,0,0,.35))}
-  .pets-on-top img:nth-child(2){animation-delay:.4s;height:104px}
-  .pets-on-top img:nth-child(3){animation-delay:.8s;height:104px}
+  .pets-on-top img{height:96px;width:auto;animation:bob 2.6s ease-in-out infinite;filter:drop-shadow(0 10px 14px rgba(0,0,0,.35))}
+  .pets-on-top img:nth-child(2){animation-delay:.3s}
+  .pets-on-top img:nth-child(3){animation-delay:.6s;height:112px}
+  .pets-on-top img:nth-child(4){animation-delay:.9s}
+  .pets-on-top img:nth-child(5){animation-delay:1.2s}
   @keyframes bob{50%{transform:translateY(-10px)}}
   .float{position:absolute;z-index:3;background:var(--card);border:1px solid var(--line);border-radius:16px;
          padding:10px 14px;font-weight:700;font-size:.9rem;box-shadow:var(--shadow);animation:drift 5s ease-in-out infinite}
@@ -130,7 +132,7 @@
   .chip i{width:18px;height:18px;border-radius:50%;display:block;border:2px solid rgba(255,255,255,.4)}
 
   /* studio */
-  .studio-shot{max-width:980px;margin:0 auto;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);position:relative;aspect-ratio:1200/838;background:var(--card)}
+  .studio-shot{max-width:980px;margin:0 auto;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);position:relative;aspect-ratio:1200/913;background:var(--card)}
   .studio-shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease}
   .studio-shot img.on{opacity:1}
 
@@ -161,7 +163,9 @@
   .final h2{margin-top:0}
   .final .pets{display:flex;justify-content:center;gap:22px;margin-bottom:22px}
   .final .pets img{height:84px;width:auto;animation:bob 2.6s ease-in-out infinite}
+  .final .pets{flex-wrap:wrap}
   .final .pets img:nth-child(2){animation-delay:.3s}.final .pets img:nth-child(3){animation-delay:.6s}
+  .final .pets img:nth-child(4){animation-delay:.9s}.final .pets img:nth-child(5){animation-delay:1.2s}
   footer{padding:40px 0 60px;color:var(--muted);text-align:center;font-size:.9rem}
 
   /* reveal */
@@ -184,7 +188,9 @@
     .petcard{grid-template-columns:1fr;text-align:center;justify-items:center}
     .chips{justify-content:center}
     .window{transform:none}
-    .pets-on-top img{height:84px}.pets-on-top img:nth-child(n+2){height:72px}
+    .pets-on-top{left:2%;right:2%}
+    .pets-on-top img{height:60px}.pets-on-top img:nth-child(3){height:70px}
+    .final .pets img{height:64px}
   }
 </style>
 </head>
@@ -201,7 +207,7 @@
 
 <header class="wrap hero">
   <div class="reveal">
-    <span class="pill"><b>New</b> v1.3 · Charge alerts at 80% – or any level you like</span>
+    <span class="pill"><b>New</b> v1.4 · Meet the cat, dog, bunny, bear &amp; koala</span>
     <h1>Your laptop deserves a <span class="grad-text">buddy.</span></h1>
     <p class="lead">A cute pet that lives on your Windows screen – it reminds you to drink water, take breaks and charge your battery, and it swings, plays and rides a bike around your desktop.</p>
     <div class="cta-row">
@@ -214,7 +220,7 @@
   </div>
   <div class="stage reveal">
     <div class="pets-on-top" aria-hidden="true">
-      <img src="img/fox.png" alt=""><img src="img/panda.png" alt=""><img src="img/penguin.png" alt="">
+      <img src="img/cat.png" alt=""><img src="img/dog.png" alt=""><img src="img/bunny.png" alt=""><img src="img/fox.png" alt=""><img src="img/koala.png" alt="">
     </div>
     <div class="window"><img src="img/studio-home.png" alt="Buddy Studio home screen with a live penguin and quick actions"></div>
     <div class="float f1">💧 Water time!<small>Every 45 min, your rules</small></div>
@@ -247,7 +253,7 @@
       <div class="tile span2 reveal">
         <div class="ic" style="background:rgba(251,146,60,.15)">🍎</div>
         <h3>Feed &amp; play</h3>
-        <p>Drop snacks from the sky, push it on a swing or watch it bounce a ball.</p>
+        <p>Drop snacks from the sky – bones for dogs, carrots for bunnies, bamboo for pandas – then swing or play ball.</p>
       </div>
       <div class="tile span2 reveal">
         <div class="ic" style="background:rgba(167,139,250,.15)">🚲</div>
@@ -273,11 +279,16 @@
   <div class="wrap">
     <p class="eyebrow reveal">Pets &amp; skins</p>
     <h2 class="reveal">Pick your pet. <span class="grad-text">Make it yours.</span></h2>
-    <p class="sub reveal">Three pets, 15 skins, any colour you like – and a name of your choice.</p>
+    <p class="sub reveal">Eight pets, 40 skins, any colour you like – and a name of your choice.</p>
     <div class="tabs reveal" role="tablist">
       <button class="tab" role="tab" aria-selected="true" data-pet="fox">🦊 Fox</button>
       <button class="tab" role="tab" aria-selected="false" data-pet="panda">🐼 Panda</button>
       <button class="tab" role="tab" aria-selected="false" data-pet="penguin">🐧 Penguin</button>
+      <button class="tab" role="tab" aria-selected="false" data-pet="cat">🐱 Cat</button>
+      <button class="tab" role="tab" aria-selected="false" data-pet="dog">🐶 Dog</button>
+      <button class="tab" role="tab" aria-selected="false" data-pet="bunny">🐰 Bunny</button>
+      <button class="tab" role="tab" aria-selected="false" data-pet="bear">🐻 Bear</button>
+      <button class="tab" role="tab" aria-selected="false" data-pet="koala">🐨 Koala</button>
     </div>
     <div class="showcase reveal">
       <div class="petcard"><div class="art"><img id="pet-a" src="img/fox.png" alt="Classic fox"></div>
@@ -344,13 +355,13 @@
 
 <div class="wrap reveal">
   <div class="final">
-    <div class="pets" aria-hidden="true"><img src="img/panda-galaxy.png" alt=""><img src="img/fox-sakura.png" alt=""><img src="img/penguin-royal.png" alt=""></div>
+    <div class="pets" aria-hidden="true"><img src="img/dog-husky.png" alt=""><img src="img/panda-galaxy.png" alt=""><img src="img/cat-ginger.png" alt=""><img src="img/bunny-lavender.png" alt=""><img src="img/bear-polar.png" alt=""></div>
     <h2>Give your laptop a <span class="grad-text">buddy</span></h2>
     <p class="sub" style="margin-bottom:28px">Stay hydrated, take breaks, and smile a little more.</p>
     <a class="btn btn-primary" href="https://github.com/nitesh2907/laptop-buddy/releases/latest/download/LaptopBuddySetup.exe">Download for Windows</a>
   </div>
 </div>
-<footer>Laptop Buddy v1.3.0 · Made with 💜 for people who forget to drink water</footer>
+<footer>Laptop Buddy v1.4.0 · Made with 💜 for people who forget to drink water</footer>
 
 <script>
   // reveal on scroll
@@ -364,7 +375,17 @@
     panda: {name: 'Panda', desc: 'Runs on bamboo and naps. Pink toe beans included.', alt: 'galaxy', altName: 'Galaxy',
             skins: [['Classic', '#2a2a2e'], ['Cocoa', '#6b4226'], ['Bubblegum', '#f06292'], ['Mint', '#3fa99d'], ['Galaxy', '#3b2f7a']]},
     penguin: {name: 'Penguin', desc: 'Scarf on, flippers ready. Waddles and eats fish.', alt: 'royal', altName: 'Royal',
-              skins: [['Classic', '#2f3a6b'], ['Emperor', '#22262e'], ['Bubblegum', '#e86aa6'], ['Mint', '#2e8b7f'], ['Royal', '#5b3fa0']]}
+              skins: [['Classic', '#2f3a6b'], ['Emperor', '#22262e'], ['Bubblegum', '#e86aa6'], ['Mint', '#2e8b7f'], ['Royal', '#5b3fa0']]},
+    cat: {name: 'Cat', desc: 'Tabby stripes, whiskers and a curly tail. Loves fish.', alt: 'ginger', altName: 'Ginger',
+          skins: [['Tabby', '#a4adb8'], ['Ginger', '#f2a65a'], ['Midnight', '#3a3a48'], ['Snow', '#fbfbfd'], ['Lilac', '#c7aee6']]},
+    dog: {name: 'Dog', desc: 'Floppy ears, waggy tail, tongue out. Will do anything for a bone.', alt: 'husky', altName: 'Husky',
+          skins: [['Golden', '#e5b77a'], ['Chocolate', '#8a5a36'], ['Husky', '#9fb0c4'], ['Snow', '#fafafa'], ['Bubblegum', '#f6a5c3']]},
+    bunny: {name: 'Bunny', desc: 'Tall wiggly ears and a puff tail. Carrots, please!', alt: 'lavender', altName: 'Lavender',
+            skins: [['Snow', '#f7f7fb'], ['Cocoa', '#9a6b4a'], ['Grey', '#b9bcc6'], ['Peach', '#ffcfae'], ['Lavender', '#d9c8f2']]},
+    bear: {name: 'Bear', desc: 'Round ears, big hugs. Fish and honey-sweet snacks.', alt: 'polar', altName: 'Polar',
+           skins: [['Brown', '#b27948'], ['Polar', '#f7f8fa'], ['Honey', '#e9b04f'], ['Black', '#3b3431'], ['Berry', '#e58fb0']]},
+    koala: {name: 'Koala', desc: 'Big fluffy ears and a sleepy smile. Loves leafy snacks.', alt: 'blush', altName: 'Blush',
+            skins: [['Grey', '#a7afba'], ['Charcoal', '#5e6470'], ['Mint', '#8fd3c4'], ['Blush', '#f2b3c6'], ['Sky', '#9cc7f0']]}
   };
   function showPet(k) {
     const p = PETS[k];
